@@ -10,7 +10,7 @@ import Logo from "../asets/Logo-Blanco.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    height:'50px',
     background: "#004680"
   },
   menuButton: {
@@ -28,9 +28,8 @@ export default function ButtonAppBar() {
     <div>
       <AppBar position="static" className={classes.root}>
         <Toolbar>
-          <Button color="inherit" style={{ marginLeft: "33px", marginRight: "10px"}}>
-            <img src={Logo} height="60px" />
-          </Button>
+            <img src={Logo} height="50px" style={{ marginLeft: "33px", marginRight: "10px"}} />
+
           <Typography variant="h6" className={classes.title}>
             SISeI: Hacking views
           </Typography>

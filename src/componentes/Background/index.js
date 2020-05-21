@@ -16,6 +16,6 @@ const images = [
 const prueba=[
   process.env.PUBLIC_URL + "/fondos/i1.jpg"];
 function Background(props) {
-  return <BackgroundSlider images={prueba} duration={45} transition={2} />;
+  return <BackgroundSlider images={prueba} duration={15} transition={2} />;
 }
 export default Background;
