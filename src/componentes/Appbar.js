@@ -7,11 +7,13 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Logo from "../asets/Logo-Blanco.png";
+import Grid from "@material-ui/core/Grid";
+import LogoTec from "../asets/LogoTecBco.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height:'50px',
-    background: "#004680"
+    height: "50px",
+    background: "#004680",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -28,11 +30,32 @@ export default function ButtonAppBar() {
     <div>
       <AppBar position="static" className={classes.root}>
         <Toolbar>
-            <img src={Logo} height="50px" style={{ marginLeft: "33px", marginRight: "10px"}} />
-
-          <Typography variant="h6" className={classes.title}>
-            SISeI: Hacking views
-          </Typography>
+          <Grid
+            container
+            direction="row"
+            justify="space-between"
+            alignItems="flex-start"
+          >
+            <Grid item>
+              <img
+                src={Logo}
+                height="50px"
+                style={{ marginLeft: "33px", marginRight: "10px" }}
+              />
+            </Grid>
+            <Grid item>
+              <Typography variant="h6" className={classes.title}>
+                SISeI: Hacking views
+              </Typography>
+            </Grid>
+            <Grid item>
+              <img
+                src={LogoTec}
+                height="50px"
+                style={{ marginLeft: "33px", marginRight: "10px" }}
+              />
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
     </div>

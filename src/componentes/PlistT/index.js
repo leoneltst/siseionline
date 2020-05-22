@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Info(props) {
+function PlistT(props) {
   const classes = useStyles();
   return (
     <Paper elevation={3} className={classes.root}>
@@ -30,18 +30,17 @@ function Info(props) {
           alignItems="center"
         >
           <Grid item>
-            <TitleStyle>{props.titulo}</TitleStyle>
+            <TitleStyle>Talleres</TitleStyle>
           </Grid>
           <Grid item>
-            {" "}
-            <SubtitleStyle>{props.contenido}</SubtitleStyle>
+          <Button>Ver todos... </Button>
           </Grid>
         </Grid>
       </Grid>
     </Paper>
   );
 }
-export default Info;
+export default PlistT;
 const TitleStyle = styled.span`
   font-family: Roboto;
   font-size: 18px;

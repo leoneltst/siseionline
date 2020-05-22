@@ -109,7 +109,7 @@ export default function Principal() {
         </GridListTile>
 
         <GridListTile cols={2} >
-        <Button>patrocinadores</Button>
+        
         <GridList  className={classes.gridListP} cols={20}>
         {tileData.map((tile) => (
           <GridListTile cols={1}>

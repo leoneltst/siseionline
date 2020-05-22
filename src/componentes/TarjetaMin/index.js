@@ -21,8 +21,15 @@ function TarjetaMin(props) {
     ></CardItemImagePlace>
     <CardBody>
       <BodyContent>
-        <TitleStyle>{props.nombre}</TitleStyle>
-        <SubtitleStyle>{props.ponente}</SubtitleStyle>
+      <Grid
+  container
+  direction="column"
+  justify="flex-start"
+  alignItems="center"
+><Grid item>
+        <TitleStyle>{props.nombre}</TitleStyle></Grid><Grid item>   <SubtitleStyle>{props.ponente}</SubtitleStyle></Grid>
+     
+        </Grid>
       </BodyContent>
     </CardBody>
   </Container>
