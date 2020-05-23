@@ -11,45 +11,30 @@ import BackgroundSlider from "react-background-slider";
 import image1 from "../asets/image1.jpg";
 import image2 from "../asets/image2.jpg";
 
-import TarjetaMin from "../componentes/TarjetaMin/";
+import PlistT from "../componentes/PlistT/";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    flexWrap: "nowrap",
-    justifyContent: "space-around",
-    overflow: "hidden",
-    alignItems: "center",
-  },
-  gridList: {
-    height: "580px",
-    width: "1280px",
-    flexWrap: "wrap",
-  },
-  gridListTyle: {
     marginTop: "10px",
-    width: "80%",
     marginLeft: "10%",
+    width: "80%",
   },
-  gridListIntern: {
+  divP: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    width: "80%",
+    width: "1100px",
+    height:"50px"
   },
-  gridListi:{
-    flexWrap: 'wrap',
+  glP: {
+    flexWrap: 'nowrap',
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
-    
-  },
-  gridListp: {
-    width: 500,
-    height: 450,
   },
   patrocinadores: {
     width: "50px",
-  height:"50px",
+    height: "50px",
   },
 }));
 
@@ -62,66 +47,47 @@ export default function Principal() {
         duration={10}
         transition={2}
       />
-      <GridList cols={2} className={classes.gridList}>
-        <GridListTile cols={2} className={classes.gridListTyle}>
+      <Grid
+        container
+        direction="column"
+        justify="space-around"
+        alignItems="center"
+      >
+        <Grid item>
           <Info
             titulo={"quienes somos"}
             contenido={
               "SISeI es un simposio con más de una década de trayectoria, organizado por un comité de estudiantes pertenecientes al Insitituto Tecnlógico de México campus Culiacán y orientado a todas esas personas como tú, apasionadas por aprender cosas nuevas, interesantes y que aporten a tu perfil profesional. Somos un simposio con el afán de reunir las mejores y más relevantes conferencias de las ciencias y tecnologías, así como talleres que complementan el contenido de este macro evento. Abarcando una amplia gama de temáticas, buscamos que obtengas satisfacción por el conocimiento ofrecido para ti, nuestro asistente."
             }
           />
-        </GridListTile>{" "}
-        <GridListTile cols={2} className={classes.gridListTyle}>
-          <Button>TALLERES</Button>
-          <div className={classes.gridListIntern}>
-            <GridList className={classes.gridListi} cols={6}>
-              {tileData.map((tile) => (
-                <GridListTile cols={1}>
-                  <TarjetaMin
-                  nombre={tile.nombre}
-                  ponente={tile.ponente}
-                  fecha={tile.fecha}
-                  descripcion={tile.descripcion}
-                  imagen={tile.img}
-                />
-                </GridListTile>
-              ))}
-            </GridList>
-          </div>
-        </GridListTile>
-        <GridListTile cols={2} className={classes.gridListTyle}>
-          <Button>CONFERENCIAS</Button>
-          <div className={classes.gridListIntern}>
-            <GridList className={classes.gridListi} cols={6}>
-              {tileData.map((tile) => (
-                <GridListTile cols={1}>
-                  <TarjetaMin
-                  nombre={tile.nombre}
-                  ponente={tile.ponente}
-                  fecha={tile.fecha}
-                  descripcion={tile.descripcion}
-                  imagen={tile.img}
-                />
-                </GridListTile>
-              ))}
-            </GridList>
-          </div>
-        </GridListTile>
-
-        <GridListTile cols={2} >
-        
-        <GridList  className={classes.gridListP} cols={20}>
-        {tileData.map((tile) => (
-          <GridListTile cols={1}>
-            <img src={tile.img} alt={tile.nombre} className={classes.patrocinadores}/>
-          </GridListTile>
-        ))}
-      </GridList>
-        </GridListTile>
-      </GridList>
+        </Grid>
+        <Grid item>
+          <PlistT />
+        </Grid>
+        <Grid item>
+          <PlistT />
+        </Grid>
+        <Grid item><div className={classes.divP}>
+              <GridList className={classes.glP} cols={15}>
+                {tileData.map((tile) => (
+                  <GridListTile>
+                          <img
+                            src={tile.img} className={classes.patrocinadores}
+                          />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div></Grid>
+      </Grid>
     </div>
   );
 }
+
+
+
+const http = new XMLHttpRequest();
+const url= 'htttp/'
+
 
 const tileData = [
   {

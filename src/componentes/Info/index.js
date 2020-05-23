@@ -10,7 +10,7 @@ import "typeface-roboto";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "80%",
+    
     display: "flex",
     justifyContent: "center",
     marginBottom: "10px",
