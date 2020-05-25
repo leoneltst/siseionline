@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: "10px",
     marginLeft: "10%",
-    width: "80%",
+    width: "1100px",
   },
   divP: {
     display: "flex",
@@ -75,21 +75,13 @@ export default function Principal() {
         <Grid item key={5}>
           <PlistCarnet />{" "}
         </Grid>
-        <Grid item key={6}>
-          <Contacto />{" "}
-        </Grid><Grid item key={10}>
+        <Grid item key={10}>
           <Patrocinadores />{" "}
         </Grid>
-        <Grid item key={4}>
-          <div className={classes.divP}>
-            <GridList className={classes.glP} cols={15}>
-              {tileData.map((tile) => (
-                <GridListTile>
-                  <img src={tile.img} className={classes.patrocinadores} />
-                </GridListTile>
-              ))}
-            </GridList>
-          </div>
+        
+
+        <Grid item key={6}>
+          <Contacto />{" "}
         </Grid>
       </Grid>
     </div>

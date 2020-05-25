@@ -32,6 +32,7 @@ function Info(props) {
         >
           <Grid item>
             <TitleStyle>{props.titulo}</TitleStyle>
+            <br></br><br></br>
           </Grid>
           <Grid item>
             {" "}
@@ -45,7 +46,7 @@ function Info(props) {
 export default Info;
 const TitleStyle = styled.span`
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
   padding-bottom: 6px;
   width: 160px;
@@ -53,7 +54,7 @@ const TitleStyle = styled.span`
 
 const SubtitleStyle = styled.span`
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   line-height: 16px;
   opacity: 0.8;

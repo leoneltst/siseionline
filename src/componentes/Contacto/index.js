@@ -12,58 +12,156 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    marginBottom: "10px",
-    backgroundColor: "#008CFFEE",
-    padding: "10px",
-    width: "400px",
+    margin: "10px",
+    backgroundColor: "#008CFFCC",
+    width: "1100px",
+    height: "250px",
   },
   margins: {
-    marginBottom: "10px",
-    rColor: "#000000",
-    padding: "10px",
+    margin: "10px",
+    
   },
   Button: {
     marginLeft: "10px",
-    marginBottom:"10px",
+    marginBottom: "10px",
   },
+  TextField:{
+    margin: "5px",
+    
+    backgroundColor: "#FFF",
+  }
 }));
 
 function Contacto(props) {
   const classes = useStyles();
   return (
-    <Paper elevation={3} className={classes.root}>
-      <Grid container direction="column" justify="Center" alignItems="Center">
+    <Paper elevation={3} className={classes.root  }>
+      <Grid className={classes.margins}
+        container
+        direction="row"
+        justify="space-between"
+        alignItems="flex-start"
+      >
         <Grid item>
-          <TitleStyle>{"Contactanos"}</TitleStyle>
+          <Grid
+            container
+            direction="column"
+            justify="space-evenly"
+            alignItems="flex-start"
+          >
+            <Grid item>
+              <TitleStyle>{"Informacion"}</TitleStyle><br></br><br></br>
+            </Grid>
+            <Grid item>
+              <SubtitleStyle>
+                {
+                  "Para más información no dudes en buscarnos en nuestro local físicamente "
+                }
+              </SubtitleStyle>
+            </Grid>
+            <Grid item>
+              <SubtitleStyle>
+                {
+                  "en el Tecnológico de culiacan, en el área de sistemas, en la planta baja del edificio B."
+                }
+              </SubtitleStyle>
+            </Grid>
+            <Grid item>
+              <SubtitleStyle>
+                {
+                  "O bien contáctanos por cualquiera de nuestros medios de difusión o correo electrónico."
+                }
+              </SubtitleStyle>
+            </Grid>
+            <Grid item>
+              <SubtitleStyle>
+                {"Correo Electronico: SiseiOnline@gmail.com"}
+              </SubtitleStyle>
+            </Grid>
+            <Grid item>
+              <TitleStyle>{"Siguenos en:"}</TitleStyle>
+            </Grid>
+            <Grid item>
+              <img
+                width="50"
+                height="50"
+                src={
+                  "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-2-1.png"
+                }
+              />
+              <img
+                width="50"
+                height="50"
+                src={
+                  "https://cdn.icon-icons.com/icons2/1826/PNG/512/4202090instagramlogosocialsocialmedia-115598_115703.png"
+                }
+              />
+              <img
+                width="50"
+                height="50"
+                src={
+                  "https://blog.expansive.mx/wp-content/uploads/2017/11/twitter-logo.png"
+                }
+              />
+              <img
+                width="50"
+                height="50"
+                src={
+                  "https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1-1.png"
+                }
+              />
+              <img
+                width="50"
+                height="50"
+                src={
+                  "https://seeklogo.com/images/T/twitch-tv-logo-51C922E0F0-seeklogo.com.png"
+                }
+              />
+            </Grid>
+
+            <Grid item>
+              <SubtitleStyle>
+                {"© 2016 - 2020 SiseiOnline.com - All Rights Reserved."}
+              </SubtitleStyle>
+            </Grid>
+            
+          </Grid>
         </Grid>
         <Grid item>
-          {" "}
-          <SubtitleStyle>
-            {
-              "Puedes contactarnos mediante correo electronico: SiseiOnline@gmail.com o dejarnos un mensaje en el siguiente recuadro."
-            }
-          </SubtitleStyle>
-        </Grid>
-        <Grid item>
-          <TextField
-            className={classes.margins}
-            id="outlined-basic"
-            label="Correo"
-            variant="outlined"
-          />
-        </Grid>
-        <Grid item>
-          <TextField
-            className={classes.margins}
-            id="outlined-multiline-static"
-            label="Escribe tu mensaje"
-            multiline
-            rows={4}
-            variant="outlined"
-          />
-        </Grid>
-        <Grid item>
-          <Button variant="outlined"className={classes.Button}>Enviar</Button>
+          <Grid
+            container
+            direction="column"
+            justify="Center"
+            alignItems="Center"
+          >
+            <Grid item>
+              <TitleStyle>{"Contactanos"}</TitleStyle>
+            </Grid>
+
+            <Grid item>
+              <TextField
+                className={classes.TextField}
+                id="outlined-basic"
+                label="Correo"
+                variant="filled"
+              />
+            </Grid>
+            <Grid item>
+              <TextField
+                className={classes.TextField}
+                id="outlined-multiline-static"
+                label="Escribe tu mensaje"
+                multiline
+                rows={2}
+                variant="filled"
+              />
+            </Grid>
+            <Grid item>
+              <Button variant="filled" className={classes.Button , classes.TextField}>
+                Enviar
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Paper>

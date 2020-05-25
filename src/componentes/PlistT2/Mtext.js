@@ -8,6 +8,7 @@ const TitleStyle = styled.span`
   color: #fff;
   padding-bottom: 6px;
   width: 160px;
+  margin-left:5px;
 `;
 const TitleStyle1 = styled.span`
   font-family: Roboto;

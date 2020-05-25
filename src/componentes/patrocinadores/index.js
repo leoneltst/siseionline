@@ -19,19 +19,28 @@ import Mtext from "../PlistT2/Mtext";
 const MGridList = styled(GridList)({
   flexWrap: "nowrap",
   transform: "translateZ(0)",
-  height: "60px",
+  height: "120px",
+  width: "1100px",
 });
 const Mimg = styled("img")({
-  width: "50px",
-  height: "50px",
+  width: "100px",
+  height: "100px",
+  background: "#FFF",
+  borderRadius: "50px",
 });
 const Mdiv = styled("div")({
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "space-around",
   overflow: "hidden",
+  width: "1080px",
+  height: "103px",
+});
+
+const Mpaper = styled(Paper)({
   width: "1100px",
-  height: "50px",
+  marginBottom: "10px",
+  backgroundColor: "#008CFFEE",
 });
 
 class Patrocinadores extends React.Component {
@@ -75,17 +84,43 @@ class Patrocinadores extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <Mdiv>
-          <MGridList cols={2}>
-            {data &&
-              data.map((item) => (
-                <GridListTile>
-                  <Mimg src={item.iconos} />
-                
-                </GridListTile>
-              ))}
-          </MGridList>
-        </Mdiv>
+        <Mpaper elevation={3}>
+          <Grid
+            container
+            direction="column"
+            justify="flex-start"
+            alignItems="stretch"
+          >
+            <Grid item key={1}>
+              <Mtext text={"Patrocinadores"} /><br></br><br></br>
+            </Grid>
+            <Grid item key={2}>
+              <Mdiv>
+                <MGridList cols={10}>
+                  {data &&
+                    data.map((item) => (
+                      <GridListTile>
+                        <Mimg src={item.iconos} />
+                      </GridListTile>
+                    ))}
+                </MGridList>
+              </Mdiv>
+            </Grid>
+            <Grid item key={3}>
+              <Grid
+                container
+                direction="row"
+                justify="space-between"
+                alignItems="flex-start"
+              >
+                <Grid item></Grid>
+                <Grid item>
+                  <Button>Ver todos... </Button>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Mpaper>
       );
     }
   }

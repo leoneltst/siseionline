@@ -82,10 +82,10 @@ class PlistT2 extends React.Component {
               container
               direction="column"
               justify="flex-start"
-              alignItems="center"
+              alignItems="stretch"
             >
               <Grid item key={1}>
-                <Mtext text={"Conferencias"}/>
+                <Mtext text={"Conferencias"}/><br></br><br></br>
               </Grid>
               <Grid item key={2}>
                 <Mdiv>
@@ -95,7 +95,7 @@ class PlistT2 extends React.Component {
                         <GridListTile key={item.Id}>
                           <TarjetaMin
                             nombre={item.nombre}
-                            ponente={item.nombreConferencista}
+                            ponente={item.nombreConferensista}
                             imagen={item.url}
                           />
                         </GridListTile>
@@ -105,8 +105,18 @@ class PlistT2 extends React.Component {
               </Grid>
 
               <Grid item key={3}>
-                <Button>Ver todos... </Button>
+              <Grid
+                container
+                direction="row"
+                justify="space-between"
+                alignItems="flex-start"
+              >
+                <Grid item></Grid>
+                <Grid item>
+                  <Button>Ver todos... </Button>
+                </Grid>
               </Grid>
+            </Grid>
             </Grid>
           </Grid>
         </Mpaper>
