@@ -1,0 +1,22 @@
+.App {
+    text-align: center;
+  }
+  
+  .root {
+    width: 100%;
+    margin-bottom: 10px;
+    background: #008CFF;
+  }
+
+  .griddiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content : space-around;
+    overflow: hidden;
+    width: 1100px;
+    height:130px;
+  }
+  .gridList {
+    flex-wrap: nowrap;
+    transform: translateZ(0);
+  }

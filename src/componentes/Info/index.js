@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     marginBottom: "10px",
     backgroundColor: "#008CFFEE",
+    padding:"10px"
   },
 }));
 
@@ -27,7 +28,7 @@ function Info(props) {
           container
           direction="column"
           justify="flex-start"
-          alignItems="center"
+          alignItems="start"
         >
           <Grid item>
             <TitleStyle>{props.titulo}</TitleStyle>

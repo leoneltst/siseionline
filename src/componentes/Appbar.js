@@ -45,7 +45,7 @@ export default function ButtonAppBar() {
             </Grid>
             <Grid item>
               <Typography variant="h6" className={classes.title}>
-                SISeI: Hacking views
+              Simposio Internacional de Sistemas e informática
               </Typography>
             </Grid>
             <Grid item>
