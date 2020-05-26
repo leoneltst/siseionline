@@ -15,7 +15,7 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import TarjetaMin from "../TarjetaMin/min";
 import Mtext from "../PlistT2/Mtext";
-
+import { BrowserRouter as Router, Switch, Route, Link }  from "react-router-dom";
 const MGridList = styled(GridList)({
   flexWrap: "nowrap",
   transform: "translateZ(0)",
@@ -115,7 +115,9 @@ class Patrocinadores extends React.Component {
               >
                 <Grid item></Grid>
                 <Grid item>
+                <Link to="/patrocinadores">
                   <Button>Ver todos... </Button>
+                  </Link>
                 </Grid>
               </Grid>
             </Grid>

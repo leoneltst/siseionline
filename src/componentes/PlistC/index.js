@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { styled ,createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  styled,
+  createMuiTheme,
+  ThemeProvider,
+} from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
@@ -11,15 +15,14 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import TarjetaMin from "../TarjetaMin/min";
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Mtext from "../PlistT2/Mtext";
-
-
 
 const MGridList = styled(GridList)({
   flexWrap: "nowrap",
   transform: "translateZ(0)",
-  
-  paddingLeft:"15px",
+
+  paddingLeft: "15px",
 });
 const Mpaper = styled(Paper)({
   width: "100%",
@@ -85,7 +88,9 @@ class PlistT2 extends React.Component {
               alignItems="stretch"
             >
               <Grid item key={1}>
-                <Mtext text={"Conferencias"}/><br></br><br></br>
+                <Mtext text={"Conferencias"} />
+                <br></br>
+                <br></br>
               </Grid>
               <Grid item key={2}>
                 <Mdiv>
@@ -105,18 +110,20 @@ class PlistT2 extends React.Component {
               </Grid>
 
               <Grid item key={3}>
-              <Grid
-                container
-                direction="row"
-                justify="space-between"
-                alignItems="flex-start"
-              >
-                <Grid item></Grid>
-                <Grid item>
-                  <Button>Ver todos... </Button>
+                <Grid
+                  container
+                  direction="row"
+                  justify="space-between"
+                  alignItems="flex-start"
+                >
+                  <Grid item></Grid>
+                  <Grid item>
+                    <Link to="/conferencias">
+                      <Button>Ver todos... </Button>
+                    </Link>
+                  </Grid>
                 </Grid>
               </Grid>
-            </Grid>
             </Grid>
           </Grid>
         </Mpaper>

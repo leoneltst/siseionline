@@ -8,8 +8,8 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
-import TarjetaPop from "../Tarjetapp/TarjetaPop";
-
+import Button from "@material-ui/core/Button";
+import Popup from "reactjs-popup";
 import styled, { css } from "styled-components";
 import "typeface-roboto";
 
@@ -17,24 +17,31 @@ const useStyles = makeStyles((theme) => ({
   root: {
     background: "#004680",
     borderRadius:"10px",
-    width: "250px",
-    height: "120px",
+    width: "100%",
+    height: "320px",
   },
 
   imagen: {
-    width: "75px",
-    height: "100px",
+    width: "225px",
+    height: "300px",
     marginRight:"10px",
     marginLeft:"10px",
     borderRadius:"5px",
   }, 
 
+  MGrid:{
+    width: "300px",
+    height: "300px",
+    marginLeft:"10px",
+  },
 }));
 
-function TarjetacBoton(props) {
+function TarjetaPop(props) {
   const classes = useStyles();
   return (
-    <Paper className={classes.root} elevation={3}>
+    <Popup trigger={<Button className="button"> leer mas... </Button>} modal>
+    {(close) => (
+    <Paper  elevation={3}>
       <Grid 
         container
         direction="row"
@@ -46,12 +53,12 @@ function TarjetacBoton(props) {
           <img src={props.imagen} className={classes.imagen}></img>
         </Grid>
         <Grid item>
-          <Grid
+          <Grid 
             container
             direction="column"
             justify="space-evenly"
             alignItems="flex-start"
-            
+            className={classes.MGrid}
           >
             <Grid item>
               <TitleStyle>{props.nombre}</TitleStyle>
@@ -60,14 +67,18 @@ function TarjetacBoton(props) {
               <SubtitleStyle>{props.ponente}</SubtitleStyle>
             </Grid>
             <Grid item>
-              <TarjetaPop imagen={props.imagen} nombre={props.nombre} ponente={props.ponente} descripcion={props.descripcion} requisitoAlumno={props.requisitoAlumno}/>
+              <SubtitleStyle>{props.descripcion}</SubtitleStyle>
             </Grid>
-            
-
+            <Grid item>
+              <SubtitleStyle>{"Requisitos previos: "+props.requisitoAlumno}</SubtitleStyle>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
     </Paper>
+
+)}
+</Popup>
   );
 }
 const TitleStyle = styled.span`
@@ -85,4 +96,4 @@ const SubtitleStyle = styled.span`
   line-height: 16px;
   opacity: 0.5;
 `;
-export default TarjetacBoton;
+export default TarjetaPop;

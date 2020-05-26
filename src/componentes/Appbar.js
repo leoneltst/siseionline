@@ -9,7 +9,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Logo from "../asets/Logo-Blanco.png";
 import Grid from "@material-ui/core/Grid";
 import LogoTec from "../asets/LogoTecBco.png";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "50px",
@@ -37,15 +37,17 @@ export default function ButtonAppBar() {
             alignItems="flex-start"
           >
             <Grid item>
-              <img
-                src={Logo}
-                height="50px"
-                style={{ marginLeft: "33px", marginRight: "10px" }}
-              />
+              <Link to="/inicio">
+                <img
+                  src={Logo}
+                  height="50px"
+                  style={{ marginLeft: "33px", marginRight: "10px" }}
+                />
+              </Link>
             </Grid>
             <Grid item>
               <Typography variant="h6" className={classes.title}>
-              Simposio Internacional de Sistemas e informática
+                Simposio Internacional de Sistemas e informática
               </Typography>
             </Grid>
             <Grid item>

@@ -13,32 +13,36 @@ import { Grid } from "@material-ui/core";
 import "typeface-roboto";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
-import TarjetaMin from "../TarjetaMin/min";
-import "./PlistT2.css";
-import Mtext from "./Mtext";
-import { BrowserRouter as Router, Switch, Route, Link }  from "react-router-dom";
-
+import MiniTarjeta from "../componentes/MiniTarjeta/";
+import Mtext from "../componentes/PlistT2/Mtext";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const MGridList = styled(GridList)({
-  flexWrap: "nowrap",
-  transform: "translateZ(0)",
+  flexWrap: "wrap",
   paddingLeft: "15px",
+  height: "auto",
 });
 const Mpaper = styled(Paper)({
-  width: "100%",
-  marginBottom: "10px",
+  width: "1100px",
+  height: "550px",
+  margin: "10px",
   backgroundColor: "#008CFFEE",
 });
 const Mdiv = styled("div")({
-  display: "flex",
   flexWrap: "wrap",
   justifyContent: "space-around",
   overflow: "hidden",
   width: "1100px",
-  height: "130px",
+  height: "510px",
 });
+const Mimg = styled("img")({
+    width: "100px",
+    height: "100px",
+    background: "#FFF",
+    borderRadius: "50px",
+  });
 
-class PlistT2 extends React.Component {
+class Pconferencias extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -49,7 +53,7 @@ class PlistT2 extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://siseiapi20200507205513.azurewebsites.net/api/taller")
+    fetch("https://siseiapi20200507205513.azurewebsites.net/api/patrocinador")
       .then(function (response) {
         return response.json();
       })
@@ -86,45 +90,26 @@ class PlistT2 extends React.Component {
             justify="flex-start"
             alignItems="stretch"
           >
-            <Grid item key={1}>
-              <Mtext text={" Talleres"} /><br></br><br></br>
-            </Grid>
+            
             <Grid item key={2}>
+            <br/><br/>
               <Mdiv>
-                <MGridList cols={4}>
+                <MGridList cols={10}>
                   {data &&
                     data.map((item) => (
                       <GridListTile key={item.Id}>
-                        <TarjetaMin
-                          nombre={item.nombre}
-                          ponente={item.nombreTallerista}
-                          imagen={item.urlImagen}
-                        />
+                        <Mimg src={item.iconos} />
                       </GridListTile>
                     ))}
                 </MGridList>
               </Mdiv>
             </Grid>
 
-            <Grid item key={3}>
-              <Grid
-                container
-                direction="row"
-                justify="space-between"
-                alignItems="flex-start"
-              >
-                <Grid item></Grid>
-                <Grid item>
-                <Link to="/talleres">
-                  <Button>Ver todos... </Button>
-                </Link>
-                </Grid>
-              </Grid>
-            </Grid>
+            
           </Grid>
         </Mpaper>
       );
     }
   }
 }
-export default PlistT2;
+export default Pconferencias;

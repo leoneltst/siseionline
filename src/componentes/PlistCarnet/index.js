@@ -15,6 +15,7 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import Carnet from "../TarjetaMin/carnet";
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Mtext from "../PlistT2/Mtext";
 
 const MGridList = styled(GridList)({
@@ -87,7 +88,9 @@ class PlistCarnet extends React.Component {
               alignItems="stretch"
             >
               <Grid item key={1}>
-                <Mtext text={"Carnets"} /><br></br><br></br>
+                <Mtext text={"Carnets"} />
+                <br></br>
+                <br></br>
               </Grid>
               <Grid item key={2}>
                 <Mdiv>
@@ -116,7 +119,9 @@ class PlistCarnet extends React.Component {
                 >
                   <Grid item></Grid>
                   <Grid item>
-                    <Button>Ver todos... </Button>
+                    <Link to="/carnets">
+                      <Button>Ver todos... </Button>
+                    </Link>
                   </Grid>
                 </Grid>
               </Grid>

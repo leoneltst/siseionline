@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    margin: "10px",
+    marginTop: "8px",
     backgroundColor: "#008CFFCC",
     width: "1100px",
     height: "250px",
