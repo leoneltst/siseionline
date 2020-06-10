@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "be489eab4443ef15835f26f217c3b7ac",
+    "revision": "65c5b98f3ce4320b014689a448661376",
     "url": "/siseionline/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/siseionline/static/css/2.d41575d4.chunk.css"
   },
   {
-    "revision": "5a6e2c90b50fa251eaaf",
+    "revision": "18f5138f6be4616df5ba",
     "url": "/siseionline/static/css/main.ef62c142.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/siseionline/static/js/2.d19c2f8a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5a6e2c90b50fa251eaaf",
-    "url": "/siseionline/static/js/main.f69e4d54.chunk.js"
+    "revision": "18f5138f6be4616df5ba",
+    "url": "/siseionline/static/js/main.fa714f41.chunk.js"
   },
   {
     "revision": "d9bee3f0717c8f698fb8",

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/siseionline/static/css/main.ef62c142.chunk.css",
-    "main.js": "/siseionline/static/js/main.f69e4d54.chunk.js",
-    "main.js.map": "/siseionline/static/js/main.f69e4d54.chunk.js.map",
+    "main.js": "/siseionline/static/js/main.fa714f41.chunk.js",
+    "main.js.map": "/siseionline/static/js/main.fa714f41.chunk.js.map",
     "runtime-main.js": "/siseionline/static/js/runtime-main.4cf34783.js",
     "runtime-main.js.map": "/siseionline/static/js/runtime-main.4cf34783.js.map",
     "static/css/2.d41575d4.chunk.css": "/siseionline/static/css/2.d41575d4.chunk.css",
     "static/js/2.d19c2f8a.chunk.js": "/siseionline/static/js/2.d19c2f8a.chunk.js",
     "static/js/2.d19c2f8a.chunk.js.map": "/siseionline/static/js/2.d19c2f8a.chunk.js.map",
     "index.html": "/siseionline/index.html",
-    "precache-manifest.5bc7bdeba9763105d75b8fc1381a9bf2.js": "/siseionline/precache-manifest.5bc7bdeba9763105d75b8fc1381a9bf2.js",
+    "precache-manifest.78ae2d8e98c01635b8d020afc44b5f06.js": "/siseionline/precache-manifest.78ae2d8e98c01635b8d020afc44b5f06.js",
     "service-worker.js": "/siseionline/service-worker.js",
     "static/css/2.d41575d4.chunk.css.map": "/siseionline/static/css/2.d41575d4.chunk.css.map",
     "static/css/main.ef62c142.chunk.css.map": "/siseionline/static/css/main.ef62c142.chunk.css.map",
@@ -26,6 +26,6 @@
     "static/css/2.d41575d4.chunk.css",
     "static/js/2.d19c2f8a.chunk.js",
     "static/css/main.ef62c142.chunk.css",
-    "static/js/main.f69e4d54.chunk.js"
+    "static/js/main.fa714f41.chunk.js"
   ]
 }
